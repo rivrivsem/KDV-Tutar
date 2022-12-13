@@ -1,0 +1,32 @@
+//@author semra
+//www.patika.com
+
+package patika;
+
+import java.util.Scanner;
+
+public class KDVTutari {
+   
+    public static void main(String[] args) {
+
+        int miktar;
+        Scanner scan =new Scanner(System.in);
+        System.out.println("islem yapmak istediginiz miktari giriniz...");
+        miktar=scan.nextInt();
+        System.out.println("KDV siz miktar = "+ miktar);
+        if (miktar>0 && miktar<=1000)
+        {
+            double value =miktar * 1.18;
+            System.out.println("KDV li miktar ="+value+"\n"+"KDV tutarı ="+(value-miktar));
+        }
+        else if (miktar>1000) {
+            double value2= miktar*1.08;
+            System.out.println("KDV li miktar ="+value2 +"\n"+"KDV tutarı ="+(value2-miktar));
+
+        }
+        else
+        {
+            System.out.println("gecerli tutar giriniz...");
+        }
+    }
+}
